@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :pokes
+ 
   devise_for :users
     root 'home#index'
     get 'home/index'
     get 'home/about'
+    resources :pokes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

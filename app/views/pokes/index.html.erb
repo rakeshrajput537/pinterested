@@ -6,9 +6,12 @@
         <div class="col-md-4 text-center" >
           <h1>Description</h1>
           <h3><%= poke.description %></h3>
-            <%= link_to 'Show', poke %>
-            <%= link_to 'Edit', edit_poke_path(poke) %>
-            <%= link_to 'Destroy', poke, method: :delete, data:{ confirm: 'Are you sure?' } %>
+          <%= image_tag poke.image.url(:medium)  %>
+          <p>
+            <%= link_to 'Show', poke , class:'btn btn-primary'%>
+            <%= link_to 'Edit', edit_poke_path(poke),class:'btn btn-primary' %>
+            <%= link_to 'Destroy', poke, method: :delete,class:'btn btn-primary', data:{ confirm: 'Are you sure?' } %>
+            </p>
         </div>
          <% end %>
      </div>

@@ -27,7 +27,6 @@ class PokesController < ApplicationController
   # POST /pokes.json
   def create
     @poke = Poke.new(poke_params)
-
     respond_to do |format|
       if @poke.save
         format.html { redirect_to @poke, notice: 'Poke was successfully created.' }
@@ -71,6 +70,6 @@ class PokesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def poke_params
-      params.require(:poke).permit(:description, :user_id)
+      params.require(:poke).permit(:description, :user_id, :image)
     end
 end
